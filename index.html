@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/estilo.css" />
+    <title>Harvard University</title>
+    <script src="js/temporizador.js"></script>
+    <script src="javascript/script.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Harvard University</h1>
+    </header>
+
+    <nav>
+      <ul id="anclas">
+        <li><a href="galeria.html">Galería de Imágenes</a></li>
+        <li><a href="preguntas.html">Juegos de Preguntas</a></li>
+        <li><a href="calendarioExamen.html">Calendario de Exámenes</a></li>
+        <li><a href="https://catalogo.bn.gov.ar/F/F794F8XEXPTFVGFE4Y8CFKXVUUYKG5HFPFAMHJLAP3VIMM19TQ-06853?func=find-b-0">Recursos Educativos</a></li>
+
+      </ul>
+    </nav>
+
+    <main>
+      <section id="fila1">
+        <h2>Materias</h2>
+      </section>
+      <div class="gallery">
+        <img
+          src="img/icono2.jpg"
+          alt="Programacion"
+          class="thumbnail"
+          title="Programacion"
+          onclick="mostrarProfesorInfo(this.alt)"
+          onclick="openModal('imagen1.jpg')"
+        />
+        <img
+          src="img/icono3.jpg"
+          alt="Quimica"
+          class="thumbnail"
+          title="Quimica"
+          onclick="mostrarProfesorInfo(this.alt)"
+          onclick="openModal('imagen2.jpg')"
+        />
+        <img
+          src="img/icono5.jpg"
+          alt="Historia"
+          class="thumbnail"
+          title="Historia"
+          onclick="mostrarProfesorInfo(this.alt)"
+          onclick="openModal('imagen2.jpg')"
+        />
+        <img
+          src="img/icono6.jpg"
+          alt="Geometria"
+          class="thumbnail"
+          title="Geometria"
+          onclick="mostrarProfesorInfo(this.alt)"
+          onclick="openModal('imagen2.jpg')"
+        />
+        <img
+          src="img/icono7.jpg"
+          alt="Fisica"
+          class="thumbnail"
+          title="Fisica"
+          onclick="mostrarProfesorInfo(this.alt)"
+          onclick="openModal('imagen2.jpg')"
+        />
+
+        <img
+          src="img/icono8.jpg"
+          alt="Matematica"
+          class="thumbnail"
+          title="Matematica4"
+          onclick="mostrarProfesorInfo(this.alt)"
+          onclick="openModal('imagen2.jpg')"
+        />
+        <div class="clearfix"></div>
+
+        <img
+          src="img/icono9.jpg"
+          alt="Lengua"
+          class="thumbnail"
+          title="Lengua"
+          onclick="mostrarProfesorInfo(this.alt)"
+          onclick="openModal('imagen2.jpg')"
+        />
+      </div>
+
+      <section id="fila3">
+        <div id="formulario" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Solicitud de informacion</h2>
+            <form id="miFormulario">
+              <label for="nombre">Nombre:</label><br>
+              <input type="text" id="nombre" name="nombre" placeholder="nombre" required><br><br>
+              <label for="email">Email:</label><br>
+              <input  type="email" id="email" name="email" placeholder="email" required><br><br>
+              <button type="submit" value="enviar">Enviar</button>
+            </form>
+            <div id="mensajeEnvio"></div>
+          </div>
+        </div>
+      </section>
+      <section id="fila4">
+        <h2>SOBRE NOSOTROS</h2>
+        <p>"En nuestra institución educativa,
+           nos dedicamos apasionadamente a la enseñanza y al desarrollo integral
+            de nuestros estudiantes. Nuestro compromiso es impulsar el crecimiento académico,
+             personal y profesional de cada individuo que forma parte de nuestra comunidad educativa.
+              Buscamos inspirar el aprendizaje, fomentar la creatividad y
+               promover un ambiente de colaboración y respeto. Nuestra misión es potenciar
+                al máximo las capacidades de nuestros alumnos, superando expectativas y
+                 preparándolos para alcanzar sus metas y contribuir positivamente a la sociedad.
+                  ¡Bienvenidos a un lugar donde el conocimiento se transforma en oportunidades y el
+                   aprendizaje nunca termina!"</p>
+      </section>
+    </main>
+    <article class="art1">
+      <h2 id="tuOpinion"><a href="mailto:institucion.harvart@ejemplo.com">DEJANOS TU OPINION</a>
+      </h2>
+    </article>
+  
+    <footer>
+      
+      <p>&copy; 2024 Historia Interactiva</p>
+    </footer>
+  </body>
+</html>
