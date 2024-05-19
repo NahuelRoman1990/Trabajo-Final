@@ -1,38 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/estilo.css">
-    <script src="script.js"></script>
-    <title>Galeria de Imagenes</title>
+    <link rel="stylesheet" href="css/estiloGaleria.css">
+    <script src="javascript/script.js"></script>
+    <title>Galería de Imágenes</title>
 </head>
 <body class="bodygaleria">
 <header>
-    <h1 id="galeria"><a href="index.html"> GALERIA DE IMAGENES</a></h1>
+    <h1 id="galeria">GALERÍA DE IMÁGENES</h1><a href="index.html">Volver al índice</a>
 </header>
 <div class="gallery">
-    
-        
-          <img src="img/p.jpeg" alt="Imagen 1" class="img-item">
-          <img src="img/P0.jpeg" alt="Imagen 2" class="img-item">
-          <img src="img/P1.jpeg" alt="Imagen 3" class="img-item">
-          <img src="img/p4.jpg" alt="Imagen 3" class="img-item">
-          <img src="img/p5.jpg" alt="Imagen 3" class="img-item">
-          <img src="img/p6.jpg" alt="Imagen 3" class="img-item">
-          <img src="img/p7.jpg" alt="Imagen 3" class="img-item">
-          <img src="img/p8.jpg" alt="Imagen 3" class="img-item">
-          <img src="img/p.jpeg" alt="Imagen 1" class="img-item">
-          <img src="img/P0.jpeg" alt="Imagen 2" class="img-item">
-          <img src="img/P1.jpeg" alt="Imagen 3" class="img-item">
-          <img src="img/p4.jpg" alt="Imagen 3" class="img-item">
-          <img src="img/p5.jpg" alt="Imagen 3" class="img-item">
-          <img src="img/p6.jpg" alt="Imagen 3" class="img-item">
-          <img src="img/p7.jpg" alt="Imagen 3" class="img-item">
-          <img src="img/p8.jpg" alt="Imagen 3" class="img-item">
-        
-    
+    <img src="img/p.jpeg" alt="Imagen 1" class="img-item" onclick="openModal('img/p.jpeg')">
+    <img src="img/P0.jpeg" alt="Imagen 2" class="img-item" onclick="openModal('img/P0.jpeg')">
+    <img src="img/P1.jpeg" alt="Imagen 3" class="img-item" onclick="openModal('img/P1.jpeg')">
+    <img src="img/p4.jpg" alt="Imagen 4" class="img-item" onclick="openModal('img/p4.jpg')">
+    <img src="img/p5.jpg" alt="Imagen 5" class="img-item" onclick="openModal('img/p5.jpg')">
+    <img src="img/p6.jpg" alt="Imagen 6" class="img-item" onclick="openModal('img/p6.jpg')">
+    <img src="img/p7.jpg" alt="Imagen 7" class="img-item" onclick="openModal('img/p7.jpg')">
+    <img src="img/p8.jpg" alt="Imagen 8" class="img-item" onclick="openModal('img/p8.jpg')">
+    <img src="img/p.jpeg" alt="Imagen 9" class="img-item" onclick="openModal('img/p.jpeg')">
+    <img src="img/P0.jpeg" alt="Imagen 10" class="img-item" onclick="openModal('img/P0.jpeg')">
+    <img src="img/P1.jpeg" alt="Imagen 11" class="img-item" onclick="openModal('img/P1.jpeg')">
+    <img src="img/p4.jpg" alt="Imagen 12" class="img-item" onclick="openModal('img/p4.jpg')">
+    <img src="img/p5.jpg" alt="Imagen 13" class="img-item" onclick="openModal('img/p5.jpg')">
+    <img src="img/p6.jpg" alt="Imagen 14" class="img-item" onclick="openModal('img/p6.jpg')">
+    <img src="img/p7.jpg" alt="Imagen 15" class="img-item" onclick="openModal('img/p7.jpg')">
+    <img src="img/p8.jpg" alt="Imagen 16" class="img-item" onclick="openModal('img/p8.jpg')">
 </div>
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Historia Interactiva. Todos los derechos reservados.</p>
+    <p>Contacto: <a href="mailto:institucion.harvart@ejemplo.com">institucion.harvart@ejemplo.com</a></p>
+</footer>
+
+<script src="javascript/script.js"></script>
 </body>
 </html>
-
