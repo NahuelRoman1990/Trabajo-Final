@@ -11,6 +11,9 @@ header {
     padding: 1em 0;
 }
 
+.indice{
+    color: #fefefe;
+  }
 
 .gallery {
     display: flex;

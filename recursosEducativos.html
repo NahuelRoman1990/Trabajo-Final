@@ -5,52 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recursos Educativos</title>
     <link rel="stylesheet" href="css/recursosEducativo.css">
-    <script src="script.js"></script>
-
+    <script src="javascript/script.js"></script>
 </head>
 <body>
+    <header>
+        <h1>Recursos Educativos</h1>
+        <a class="indice" href="index.html">Volver al índice</a>
+    </header>
 
+    <section id="contenido">
+        <h2>Calculadora de Notas</h2>
+        <form id="calculadoraNotas">
+            <label for="nota1">Nota 1:</label>
+            <input type="number" id="nota1" name="nota1" required><br><br>
+            <label for="nota2">Nota 2:</label>
+            <input type="number" id="nota2" name="nota2" required><br><br>
+            <label for="nota3">Nota 3:</label>
+            <input type="number" id="nota3" name="nota3" required><br><br>
+            <button type="button" onclick="calcularPromedio()">Calcular Promedio</button>
+        </form>
+        <p id="resultadoPromedio"></p>
+    </section>
 
-<header>
-    <h1>Recursos Educativos</h1>
-    <a href="index.html">Volver al índice</a>
-</header>
+    <section id="materialesEstudio">
+        <h2>Materiales de Estudio</h2>
+        <p>Esta sección ofrece materiales de estudio, enlaces útiles y recursos adicionales para el aprendizaje histórico.</p>
+        <h3>Agregar Contenidos o Esquemas Conceptuales</h3>
+        <form id="agregarContenidoForm" onsubmit="agregarContenido(event)">
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" name="titulo" required><br><br>
+            <label for="contenido">Contenido:</label><br>
+            <textarea id="contenido" name="contenido" rows="4" required></textarea><br><br>
+            <button type="submit">Agregar Contenido</button>
+        </form>
+    </section>
 
-
-<section id="contenido">
-    <h2>Calculadora de Notas</h2>
-    <form id="calculadoraNotas">
-        <label for="nota1">Nota 1:</label>
-        <input type="number" id="nota1" name="nota1" required><br><br>
-        <label for="nota2">Nota 2:</label>
-        <input type="number" id="nota2" name="nota2" required><br><br>
-        <label for="nota3">Nota 3:</label>
-        <input type="number" id="nota3" name="nota3" required><br><br>
-        <button type="button" onclick="calcularPromedio()">Calcular Promedio</button>
-    </form>
-    <p id="resultadoPromedio"></p>
-</section>
-
-<section id="materialesEstudio">
-    <h2>Materiales de Estudio</h2>
-    <p>Esta sección ofrece materiales de estudio, enlaces útiles y recursos adicionales para el aprendizaje histórico.</p>
-    <h3>Agregar Contenidos o Esquemas Conceptuales</h3>
-    <form id="agregarContenido">
-        <label for="titulo">Título:</label>
-        <input type="text" id="titulo" name="titulo" required><br><br>
-        <label for="contenido">Contenido:</label><br>
-        <textarea id="contenido" name="contenido" rows="4" required></textarea><br><br>
-        <button type="button" onclick="agregarContenido()">Agregar Contenido</button>
-    </form>
-</section>
-
-<!-- Footer -->
-<footer>
-    <p>&copy; 2024 Recursos Educativos</p>
-</footer>
-
-<!-- Script JS -->
-<script src="script.js"></script>
-
-</body>
-</html>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Recursos Educativos</p>
+    </footer>

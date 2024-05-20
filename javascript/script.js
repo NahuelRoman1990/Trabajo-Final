@@ -7,7 +7,7 @@ const temporizador = setInterval(() => {
   tiempoEstudio--;
   if (tiempoEstudio <= 0) {
     clearInterval(temporizador);
-    alert('¡Tiempo de estudio finalizado!');
+    alert('¡Tiempo de 2 horas!');
   }
 }, 1000); // Intervalo de actualización cada segundo
 
@@ -101,6 +101,7 @@ function mostrarProfesorInfo(materia) {
   alert(`Profesor: ${profesor}\nDías de cursado: ${dias}`);
 }
 
+
 document.addEventListener('DOMContentLoaded', function() {
   const formulario = document.getElementById('miFormulario');
   const mensajeEnvio = document.getElementById('mensajeEnvio');
@@ -115,13 +116,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // JavaScript para mostrar el modal
 function openModal(imageSrc) {
-  var modal = document.getElementById("formulario");
-  var modalImg = document.createElement("img");
+  let modal = document.getElementById("formulario");
+  let modalImg = document.createElement("img");
   modalImg.src = imageSrc;
   modalImg.style.width = "100%";
   
   /* Elimina cualquier imagen existente en el modal*/
-  var modalContent = document.querySelector(".modal-content");
+  let modalContent = document.querySelector(".modal-content");
   while (modalContent.firstChild) {
     modalContent.removeChild(modalContent.firstChild);
   }
@@ -134,56 +135,52 @@ function openModal(imageSrc) {
 }
 
 /*Cierra el modal cuando se hace clic en el botón de cerrar*/
-var span = document.getElementsByClassName("close")[0];
+let span = document.getElementsByClassName("close")[0];
 span.onclick = function() {
-  var modal = document.getElementById("formulario");
+  let modal = document.getElementById("formulario");
   modal.style.display = "none";
 }
 
 /*mostrar el modal*/
 function openModal(imageSrc) {
-  var modal = document.getElementById("myModal");
-  var modalImg = document.getElementById("img01");
-  var captionText = document.getElementById("caption");
+  let modal = document.getElementById("myModal");
+  let modalImg = document.getElementById("img01");
+  let captionText = document.getElementById("caption");
 
   modal.style.display = "block";
   modalImg.src = imageSrc;
   captionText.innerHTML = imageSrc.alt;
 }
 
-// Cierra el modal cuando se hace clic en el botón de cerrar
+/*Cierra el modal cuando se hace clic en el botón de cerrar*/
 function closeModal() {
-  var modal = document.getElementById("myModal");
+  let modal = document.getElementById("myModal");
   modal.style.display = "none";
 }
 
 
 function calcularPromedio() {
-  let notas = document.querySelectorAll('.nota');
-  let total = 0;
-  let cantidadNotas = 0;
-  let notasValidas = true;
+  /* Obtener los valores de las notas*/
+  let nota1 = parseFloat(document.getElementById('nota1').value);
+  let nota2 = parseFloat(document.getElementById('nota2').value);
+  let nota3 = parseFloat(document.getElementById('nota3').value);
 
-  notas.forEach(function(nota) {
-    if (nota.value !== '') {
-      let valorNota = parseFloat(nota.value);
-      if (valorNota >= 0 && valorNota <= 10) {
-        total += valorNota;
-        cantidadNotas++;
-      } else {
-        notasValidas = false;
-      }
-    }
-  });
-
-  if (cantidadNotas > 0 && notasValidas) {
-    let promedio = total / cantidadNotas;
-    alert('El promedio de las notas es: ' + promedio.toFixed(2));
-  } else if (!notasValidas) {
-    alert('Por favor ingrese notas válidas entre 0 y 10.');
-  } else {
-    alert('No hay notas válidas para calcular el promedio.');
+  /* Verificar que las notas estén dentro del rango válido */
+  if (isNaN(nota1) || isNaN(nota2) || isNaN(nota3) || nota1 < 0 || nota1 > 10 || nota2 < 0 || nota2 > 10 || nota3 < 0 || nota3 > 10) {
+      alert('Por favor, ingresa números válidos entre 0 y 10 para las notas.');
+      return;
   }
+
+  /*Calcular el promedio*/
+  let promedio = (nota1 + nota2 + nota3) / 3;
+
+  /*Mostrar el resultado del promedio y redondear a maximo 2 decimales*/
+  document.getElementById('resultadoPromedio').innerText = 'El promedio de las notas es: ' + promedio.toFixed(2);
+
+  /*Limpia los campos donde se ingresan las notas*/ 
+  document.getElementById('nota1').value = "";
+  document.getElementById('nota2').value = "";
+  document.getElementById('nota3').value = "";
 }
 
 
@@ -196,13 +193,11 @@ function agregarCampoNota() {
   contenedorNotas.appendChild(nuevoCampo);
 }
 
-
-function agregarContenido() {
-  let contenedorContenidos = document.getElementById('contenedorContenidos');
-  let nuevoContenido = document.createElement('textarea');
-  nuevoContenido.setAttribute('rows', '4');
-  nuevoContenido.setAttribute('placeholder', 'Ingrese su contenido o esquema conceptual');
-  contenedorContenidos.appendChild(nuevoContenido);
+function agregarContenido(event) {
+  event.preventDefault(); 
+  const titulo = document.getElementById('titulo').value;
+  const contenido = document.getElementById('contenido').value;
+  console.log('Título:', titulo);
+  console.log('Contenido:', contenido);
+  document.getElementById('agregarContenidoForm').reset();
 }
-
-
