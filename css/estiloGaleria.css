@@ -1,20 +1,21 @@
+/*Fuente, margenes y rellenos del cuerpo*/
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
-
+/*Estilo para encabezado*/
 header {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 1em 0;
 }
-
+/*Estilo para el enlace dentro del encabezado*/
 .indice{
     color: #fefefe;
   }
-
+/*Contenedor de la galeria con flexbox, para ubicar las imagenes*/
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -22,19 +23,19 @@ header {
     gap: 1em;
     padding: 1em;
 }
-
+/*Ancho especifico de las imagenes, tiempo de transicion*/
 .img-item {
     width: 150px;
     height: auto;
     cursor: pointer;
     transition: transform 0.2s;
 }
-
+/*Escala de la transicion el "1" representa el 100% los decimales a la derecha el agregado */
 .img-item:hover {
     transform: scale(1.05);
 }
 
-/* Modal Style */
+/* Define la apariencia del contenedor de las imagenes */
 .modal {
     display: none;
     position: fixed;
@@ -48,14 +49,14 @@ header {
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.9);
 }
-
+/*Define la apariencia de las imagenes dentro del contenedor*/
 .modal-content {
     margin: auto;
     display: block;
     width: 80%;
     max-width: 700px;
 }
-
+/*Estilo de texto debajo de la imagen del contenedor*/
 #caption {
     margin: auto;
     display: block;

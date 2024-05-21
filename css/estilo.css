@@ -97,26 +97,7 @@ footer {
 }
 
 
-@media (max-width: 768px) {
-  .thumbnail {
-    width: 100px;
-  }
-}
 
-@media (max-width: 480px) {
-  .thumbnail {
-    width: 75px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav ul li {
-    margin: 0.5em 0;
-  }
-}
 
 
 #examen {
@@ -159,9 +140,7 @@ footer {
 }
 
 #fila1,
-#fila2,
-#fila3,
-#fila4 {
+#fila2 {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1em;
@@ -171,9 +150,7 @@ footer {
 }
 
 #fila1:hover,
-#fila2:hover,
-#fila3:hover,
-#fila4:hover {
+#fila2:hover{
   transform: scale(1.01);
 }
 
@@ -274,6 +251,27 @@ footer {
 
 #sobreNosotros {
   word-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+  .thumbnail {
+    width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .thumbnail {
+    width: 75px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 0.5em 0;
+  }
 }
 
 @media (min-width: 1281px) {
