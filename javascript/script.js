@@ -160,12 +160,13 @@ function closeModal() {
 
 
 function calcularPromedio() {
-  /* Obtener los valores de las notas*/
+  /* Obtener los valores de las notas use el parse float, para que solo traer entero y maximo 2 decimales*/
   let nota1 = parseFloat(document.getElementById('nota1').value);
   let nota2 = parseFloat(document.getElementById('nota2').value);
   let nota3 = parseFloat(document.getElementById('nota3').value);
 
-  /* Verificar que las notas estén dentro del rango válido */
+  /* Verificar que las notas estén dentro del rango válido  isNaN es una función 
+  de JavaScript que se utiliza para determinar si un valor es "Not-a-Number" */
   if (isNaN(nota1) || isNaN(nota2) || isNaN(nota3) || nota1 < 0 || nota1 > 10 || nota2 < 0 || nota2 > 10 || nota3 < 0 || nota3 > 10) {
       alert('Por favor, ingresa números válidos entre 0 y 10 para las notas.');
       return;
